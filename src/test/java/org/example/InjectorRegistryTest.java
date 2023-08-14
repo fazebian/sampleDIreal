@@ -59,7 +59,17 @@ public class InjectorRegistryTest  {
                 assertEquals(impl, registry.lookUpInstance(I.class));
         }
     }
+        @Nested
+        public class test2{
 
+        @Test @Tag("test2")
+            public void registerInstanceAndGetInstancePreciseSignature(){
+                var registry =  new InjectorRegistry();
+                registry.registerInstance(String.class , "hello");
+                String instance = registry.lookUpInstance(String.class);
+                assertEquals("hello", instance);
+            }
+        }
     }
 
 
