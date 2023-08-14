@@ -1,12 +1,18 @@
 package org.example;
 
 import java.util.HashMap;
-import java.util.Map;
+import java.util.Objects;
 
 public class InjectorRegistry {
 
-    private Map<Class<?>, Object> values = new HashMap<>();
+        private HashMap<Class<?>, Object>value =  new HashMap<>();
 
-    public  <T> void registerInstance(Class<?> T , Object o){}
-    public <T>void lookUpInstance(Class<?> T){}
+        public void registerInstance(Class <?> type, Object instance){
+                Objects.requireNonNull(type);
+                Objects.requireNonNull(instance);
+        }
+
+        public void lookUpInstance(Class<?> type){
+                Objects.requireNonNull(type);
+        }
 }
