@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6ae2c7a2-1596-43b8-b61d-4120a43dd8ec" name="Changes" comment=":) ajout de required type T">
+    <list default="true" id="6ae2c7a2-1596-43b8-b61d-4120a43dd8ec" name="Changes" comment=":) ajout de Supplier et donc qlq modificatiopn">
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/Inject.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/InjectorRegistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/InjectorRegistry.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/example/InjectorRegistryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/InjectorRegistryTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -17,8 +17,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JUnit3 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -63,8 +63,8 @@
       <recent name="org.example" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.InjectorRegistryTest$test2.registerInstanceAndGetInstancePreciseSignature">
-    <configuration name="InjectorRegistryTest$test1.getClassAndReturnInstance" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.InjectorRegistryTest$test1.atInjectTargetMethodAndConstructorAndRetentionIsRuntime">
+    <configuration name="InjectorRegistryTest$test1.atInjectTargetMethodAndConstructorAndRetentionIsRuntime" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="sampleDI" />
       <extension name="coverage">
         <pattern>
@@ -74,55 +74,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="org.example.InjectorRegistryTest" />
       <option name="MAIN_CLASS_NAME" value="org.example.InjectorRegistryTest$test1" />
-      <option name="METHOD_NAME" value="getClassAndReturnInstance" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="InjectorRegistryTest$test1.registerInstanceAndGetInstanceInteger" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="sampleDI" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example.InjectorRegistryTest" />
-      <option name="MAIN_CLASS_NAME" value="org.example.InjectorRegistryTest$test1" />
-      <option name="METHOD_NAME" value="registerInstanceAndGetInstanceInteger" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="InjectorRegistryTest$test1.registerInstanceAndGetInstanceSameInstance" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="sampleDI" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example.InjectorRegistryTest" />
-      <option name="MAIN_CLASS_NAME" value="org.example.InjectorRegistryTest$test1" />
-      <option name="METHOD_NAME" value="registerInstanceAndGetInstanceSameInstance" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="InjectorRegistryTest$test1.registerInstanceAndGetInstanceWithAnInterface" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="sampleDI" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example.InjectorRegistryTest" />
-      <option name="MAIN_CLASS_NAME" value="org.example.InjectorRegistryTest$test1" />
-      <option name="METHOD_NAME" value="registerInstanceAndGetInstanceWithAnInterface" />
+      <option name="METHOD_NAME" value="atInjectTargetMethodAndConstructorAndRetentionIsRuntime" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -144,13 +96,60 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="InjectorRegistryTest$test3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="sampleDI" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.InjectorRegistryTest" />
+      <option name="MAIN_CLASS_NAME" value="org.example.InjectorRegistryTest$test3" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InjectorRegistryTest$test3.registerProvider" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="sampleDI" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.InjectorRegistryTest" />
+      <option name="MAIN_CLASS_NAME" value="org.example.InjectorRegistryTest$test3" />
+      <option name="METHOD_NAME" value="registerProvider" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InjectorRegistryTest$test3.registerProviderWithAnInterface" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="sampleDI" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.InjectorRegistryTest" />
+      <option name="MAIN_CLASS_NAME" value="org.example.InjectorRegistryTest$test3" />
+      <option name="METHOD_NAME" value="registerProviderWithAnInterface" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.InjectorRegistryTest$test1.atInjectTargetMethodAndConstructorAndRetentionIsRuntime" />
+        <item itemvalue="JUnit.InjectorRegistryTest$test3.registerProviderWithAnInterface" />
+        <item itemvalue="JUnit.InjectorRegistryTest$test3" />
+        <item itemvalue="JUnit.InjectorRegistryTest$test3.registerProvider" />
         <item itemvalue="JUnit.InjectorRegistryTest$test2.registerInstanceAndGetInstancePreciseSignature" />
-        <item itemvalue="JUnit.InjectorRegistryTest$test1.registerInstanceAndGetInstanceWithAnInterface" />
-        <item itemvalue="JUnit.InjectorRegistryTest$test1.registerInstanceAndGetInstanceSameInstance" />
-        <item itemvalue="JUnit.InjectorRegistryTest$test1.registerInstanceAndGetInstanceInteger" />
-        <item itemvalue="JUnit.InjectorRegistryTest$test1.getClassAndReturnInstance" />
       </list>
     </recent_temporary>
   </component>
@@ -163,7 +162,7 @@
       <option name="presentableId" value="Default" />
       <updated>1691995230416</updated>
       <workItem from="1691995233177" duration="2708000" />
-      <workItem from="1691998722976" duration="7968000" />
+      <workItem from="1691998722976" duration="10119000" />
     </task>
     <task id="LOCAL-00001" summary="first">
       <created>1691998220522</created>
@@ -193,7 +192,14 @@
       <option name="project" value="LOCAL" />
       <updated>1692004201349</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary=":) ajout de Supplier et donc qlq modificatiopn">
+      <created>1692008989951</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1692008989951</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -216,7 +222,8 @@
     <MESSAGE value=":)" />
     <MESSAGE value=":) ajout de qlq test" />
     <MESSAGE value=":) ajout de required type T" />
-    <option name="LAST_COMMIT_MESSAGE" value=":) ajout de required type T" />
+    <MESSAGE value=":) ajout de Supplier et donc qlq modificatiopn" />
+    <option name="LAST_COMMIT_MESSAGE" value=":) ajout de Supplier et donc qlq modificatiopn" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

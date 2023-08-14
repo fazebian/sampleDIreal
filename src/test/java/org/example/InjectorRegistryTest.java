@@ -4,8 +4,12 @@ import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
+import java.lang.annotation.Target;
+import java.util.List;
+
+import static java.lang.annotation.ElementType.CONSTRUCTOR;
+import static java.lang.annotation.ElementType.METHOD;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class InjectorRegistryTest  {
     @Nested
@@ -16,7 +20,10 @@ public class InjectorRegistryTest  {
             var registry = new InjectorRegistry();
             assertNotNull(registry);
         }
-
+        @Test @Tag("test1")
+        public void atInjectTargetMethodAndConstructorAndRetentionIsRuntime() {
+            assertEquals(List.of(METHOD, CONSTRUCTOR), List.of(Inject.class.getAnnotation(Target.class).value()));
+        }
         @Test @Tag("test1")
         public void registerInstanceAndGetInstanceString(){
             var registry = new InjectorRegistry();
@@ -68,6 +75,43 @@ public class InjectorRegistryTest  {
                 registry.registerInstance(String.class , "hello");
                 String instance = registry.lookUpInstance(String.class);
                 assertEquals("hello", instance);
+            }
+        }
+        @Nested
+        public class test3{
+        @Test @Tag("test3")
+            public void registerProvider(){
+                record Bar(){}
+
+            var registry = new InjectorRegistry();
+            registry.registerProvider(Bar.class, Bar::new);
+
+            var instance1 =registry.lookUpInstance(Bar.class);
+            var instance2 = registry.lookUpInstance(Bar.class);
+
+            assertNotSame(instance1,instance2);
+            assertEquals(instance1, instance2);
+
+            }
+            @Test @Tag("test3")
+            public void registerProviderWithAnInterface(){
+                interface I{
+                    String hello();
+                }
+                record Impl() implements I{
+                    @Override
+                    public String hello() {
+                        return "hello";
+                    }
+                }
+                var registry= new InjectorRegistry();
+                registry.registerProvider(I.class,Impl::new );
+
+                var instance1 = registry.lookUpInstance(I.class);
+                var instance2 =registry.lookUpInstance(I.class);
+
+                assertNotSame(instance1, instance2);
+                assertEquals(instance1, instance2);
             }
         }
     }
