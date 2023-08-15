@@ -1,6 +1,8 @@
 package org.example;
 
+import java.beans.PropertyDescriptor;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Objects;
 import java.util.function.Supplier;
 
@@ -34,6 +36,12 @@ public class InjectorRegistry {
                         throw new IllegalStateException("no provider of "+ type.getName() );
                 }
                 return provider;
+        }
+                //TODO
+        private List<PropertyDescriptor> findInjectableProperties(Class<?> type){
+
+
+                return null;
         }
 
 
