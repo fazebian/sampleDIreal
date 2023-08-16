@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6ae2c7a2-1596-43b8-b61d-4120a43dd8ec" name="Changes" comment=":)">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Utils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/InjectorRegistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/InjectorRegistry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/InjectorRegistryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/InjectorRegistryTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +67,7 @@
       <recent name="org.example" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.App">
+  <component name="RunManager" selected="JUnit.InjectorRegistryTest$test1.registerInstanceAndGetInstanceString">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.App" />
       <module name="sampleDI" />
@@ -99,7 +97,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="InjectorRegistryTest$test3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="InjectorRegistryTest$test1.registerInstanceAndGetInstanceString" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="sampleDI" />
       <extension name="coverage">
         <pattern>
@@ -108,23 +106,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.example.InjectorRegistryTest" />
-      <option name="MAIN_CLASS_NAME" value="org.example.InjectorRegistryTest$test3" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="InjectorRegistryTest$test3.registerProvider" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="sampleDI" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example.InjectorRegistryTest" />
-      <option name="MAIN_CLASS_NAME" value="org.example.InjectorRegistryTest$test3" />
-      <option name="METHOD_NAME" value="registerProvider" />
+      <option name="MAIN_CLASS_NAME" value="org.example.InjectorRegistryTest$test1" />
+      <option name="METHOD_NAME" value="registerInstanceAndGetInstanceString" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -146,13 +129,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="InjectorRegistryTest$test4.findInjectablePropertiesOneInjectMethod" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="sampleDI" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.InjectorRegistryTest" />
+      <option name="MAIN_CLASS_NAME" value="org.example.InjectorRegistryTest$test4" />
+      <option name="METHOD_NAME" value="findInjectablePropertiesOneInjectMethod" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.InjectorRegistryTest$test1.registerInstanceAndGetInstanceString" />
+        <item itemvalue="JUnit.InjectorRegistryTest$test4.findInjectablePropertiesOneInjectMethod" />
         <item itemvalue="Application.App" />
         <item itemvalue="JUnit.InjectorRegistryTest$test1.atInjectTargetMethodAndConstructorAndRetentionIsRuntime" />
         <item itemvalue="JUnit.InjectorRegistryTest$test3.registerProviderWithAnInterface" />
-        <item itemvalue="JUnit.InjectorRegistryTest$test3" />
-        <item itemvalue="JUnit.InjectorRegistryTest$test3.registerProvider" />
       </list>
     </recent_temporary>
   </component>
@@ -166,7 +165,8 @@
       <updated>1691995230416</updated>
       <workItem from="1691995233177" duration="2708000" />
       <workItem from="1691998722976" duration="15404000" />
-      <workItem from="1692079385559" duration="2300000" />
+      <workItem from="1692079385559" duration="4514000" />
+      <workItem from="1692162341000" duration="652000" />
     </task>
     <task id="LOCAL-00001" summary="first">
       <created>1691998220522</created>
@@ -217,7 +217,14 @@
       <option name="project" value="LOCAL" />
       <updated>1692021586777</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary=":)">
+      <created>1692086053895</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1692086053895</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

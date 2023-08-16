@@ -1,6 +1,7 @@
 package org.example;
 
 import java.beans.PropertyDescriptor;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Objects;
@@ -37,11 +38,16 @@ public class InjectorRegistry {
                 }
                 return provider;
         }
-                //TODO
-        private List<PropertyDescriptor> findInjectableProperties(Class<?> type){
+                //package privé pour le test
+        static List<PropertyDescriptor> findInjectableProperties(Class<?> type){
+                var beanInfo =Utils.beanInfo(type);
+                return Arrays.stream(beanInfo.getPropertyDescriptors())
+                        .filter(propertyDescriptor -> {
+                                var setter = propertyDescriptor.getWriteMethod();
+                                return setter !=null && setter.isAnnotationPresent(Inject.class);
+                        })
+                        .toList();
 
-
-                return null;
         }
 
 

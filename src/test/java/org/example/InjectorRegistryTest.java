@@ -114,6 +114,21 @@ public class InjectorRegistryTest  {
                 assertEquals(instance1, instance2);
             }
         }
+        @Nested
+        public class test4 {
+            public static class A{
+                @Inject
+                public void setValue(String value){}
+            }
+            @Test @Tag("test4")
+            public void findInjectablePropertiesOneInjectMethod(){
+                var propreties = InjectorRegistry.findInjectableProperties(A.class);
+                assertAll(
+                        ()->assertEquals(1,propreties.size()),
+                        ()->assertEquals(A.class.getMethod("setValue", String.class), propreties.get(0).getWriteMethod())
+                );
+            }
+        }
     }
 
 
